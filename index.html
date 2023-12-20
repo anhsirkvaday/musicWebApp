@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>musicApp</title>
+    <link rel="stylesheet" href="musicHome.css" />
+    <script src="https://kit.fontawesome.com/448925e1e1.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="bg-warning bg-gradient">
+            <ul>
+                <li id="logo">
+                    <h3>LAKRI<br />MuSiC</h3>
+                </li>
+                <li>Home</li>
+                <li>About</li>
+            </ul>
+            <!-- <input type="search" id="searchSongs"/> -->
+            <form class="form-inline">
+                <input class="form-control mx-3" id="searchSongs" type="search" placeholder="Search songs..."
+                    aria-label="Search">
+                <button class="btn" style="background-color: black; color:white;">Search</button>
+            </form>
+        </nav>
+    </header>
+    <div class="songContainer">
+        <aside class="songsList">
+            <ul id="songsList">
+            </ul>
+        </aside>
+        <main>
+            <section class="songsUI">
+                <img src="https://i0.wp.com/gchord.in/wp-content/uploads/2022/07/x1080.jpg" id="songPoster"
+                    alt="Song Image" />
+                <h4 id="songName">Phir Bhi Tumko Chaahunga</h4>
+                <p id="artistName">Arijit Singh</p>
+            </section>
+            <section class="musicControls">
+                <div class="timeShow">
+                    <span id="currTime">0:00</span>
+                    <input type="range" id="songProgressBar" class="musicRange" value="0" min="0" max="100">
+                    <span id="remainsTime">0:00</span>
+                </div>
+                <div class="controls">
+                    <i class="fa-solid fa-backward" id="backward"></i>
+                    <i class="fa-regular fa-circle-play" id="playSong"></i>
+                    <!-- <i class="fa-regular fa-circle-pause"></i> -->
+                    <i class="fa-solid fa-forward" id="forward"></i>
+
+                </div>
+            </section>
+            <img src="playing.gif" alt="playingGif" id="playingGif" />
+        </main>
+    </div>
+    <script src="musicHome.js"></script>
+    <script src="filterSongs.js"></script>
+</body>
+
+</html>
